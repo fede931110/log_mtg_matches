@@ -68,7 +68,7 @@ function win_pct_str(vittorie, totale) {
 /// @param {string} risultato
 /// @param {string} mazzo
 /// @param {string} avversario
-/// @return {array}
+/// @return {Array<any>}
 function filtra_partite(tipo, risultato, mazzo, avversario) {
     var _out = [];
     var _n   = array_length(global.partite);
@@ -94,7 +94,7 @@ function filtra_partite(tipo, risultato, mazzo, avversario) {
 /// @desc Ritorna i top N mazzi ordinati per win% (con almeno min_partite partite).
 /// @param {real} n          numero di risultati da ritornare
 /// @param {real} min_partite soglia minima di partite per essere inclusi
-/// @return {array}  array di struct { nome, totale, vittorie, win_pct }
+/// @return {Array<Struct>}  array di struct { nome, totale, vittorie, win_pct }
 function top_mazzi(n, min_partite) {
     var _list = [];
     var _keys = struct_get_names(global.stats.per_mazzo);

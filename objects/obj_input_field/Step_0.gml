@@ -16,8 +16,8 @@ if (keyboard_check_pressed(vk_backspace) && string_length(_text) > 0) {
     _cursor = string_length(_text);
 }
 
-// Invio  →  conferma
-if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_numpad_enter)) {
+// Invio  →  conferma (vk_enter cattura sia Return che Numpad Enter)
+if (keyboard_check_pressed(vk_enter)) {
     if (on_submit != undefined && string_length(_text) > 0) {
         on_submit(_text);
         _text    = "";

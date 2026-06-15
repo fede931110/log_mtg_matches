@@ -3,7 +3,6 @@
 var _sw  = display_get_gui_width();
 var _sh  = display_get_gui_height();
 var _m   = MARGIN;
-var _s   = global.stats;
 
 draw_set_colour(COL_BG);
 draw_rectangle(0, 0, _sw, _sh, false);
@@ -43,7 +42,7 @@ draw_panel(_m, _py1, _sw - _m, _py2);
 
 // Intestazione tabella
 var _cols = ["NOME", "PARTITE", "W", "L", "WIN%"];
-var _cx   = [_m + 16, _m + 170, _m + 240, _m + 290, _sw - _m - 16];
+var _cx   = [_m + 8, _sw * 0.44, _sw * 0.59, _sw * 0.72, _sw - _m - 8];
 var _calign = [fa_left, fa_center, fa_center, fa_center, fa_right];
 draw_set_font(fnt_small);
 draw_set_colour(COL_INK_FADED);
@@ -103,16 +102,17 @@ function _get_stat_rows() {
     var _out  = [];
     var _src  = {};
     switch (_tab) {
-        case 0: _src = _s.per_modalita;   break;
-        case 1: _src = _s.per_mazzo;      break;
-        case 2: _src = _s.per_avversario; break;
+        case 0: _src = global.stats.per_modalita;   break;
+        case 1: _src = global.stats.per_mazzo;      break;
+        case 2: _src = global.stats.per_avversario; break;
     }
     var _keys = struct_get_names(_src);
     for (var i = 0; i < array_length(_keys); i++) {
         var _k = _keys[i];
         var _b = _src[$ _k];
+        var _nome_disp = (string_length(_k) > 14) ? (string_copy(_k, 1, 12) + "...") : _k;
         array_push(_out, [
-            _k,
+            _nome_disp,
             string(_b.totale),
             string(_b.vittorie),
             string(_b.sconfitte),

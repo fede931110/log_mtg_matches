@@ -1,4 +1,4 @@
-﻿{
+{
   "$GMObject":"",
   "%Name":"obj_controller_log",
   "eventList":[
@@ -33,6 +33,5 @@
   "solid":false,
   "spriteId":null,
   "spriteMaskId":null,
-  "tags":[],
   "visible":true,
 }

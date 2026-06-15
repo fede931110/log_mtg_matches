@@ -1,4 +1,4 @@
-﻿{
+{
   "$GMObject":"",
   "%Name":"obj_controller_menu",
   "eventList":[
@@ -32,6 +32,5 @@
   "solid":false,
   "spriteId":null,
   "spriteMaskId":null,
-  "tags":[],
   "visible":true,
 }

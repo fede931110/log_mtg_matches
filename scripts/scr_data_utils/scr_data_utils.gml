@@ -108,6 +108,7 @@ function aggiungi_partita(partita) {
 /// @desc Rimuove la partita con l'id dato e salva.
 /// @param {real} id
 function rimuovi_partita(id) {
+    if (!is_array(global.partite)) return;
     var _new = [];
     for (var i = 0; i < array_length(global.partite); i++) {
         if (global.partite[i].id != id) array_push(_new, global.partite[i]);

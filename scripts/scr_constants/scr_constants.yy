@@ -1,10 +1,13 @@
-﻿{
+{
   "$GMScript":"v1",
   "%Name":"scr_constants",
-  "isDnD":false,
   "isCompatibility":false,
+  "isDnD":false,
   "name":"scr_constants",
-  "parent":{"name":"Script","path":"folders/Script.yy",},
+  "parent":{
+    "name":"Script",
+    "path":"folders/Script.yy",
+  },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
 }
