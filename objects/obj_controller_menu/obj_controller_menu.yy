@@ -33,5 +33,5 @@
   "spriteId":null,
   "spriteMaskId":null,
   "tags":[],
-  "visible":false,
+  "visible":true,
 }
