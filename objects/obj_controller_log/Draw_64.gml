@@ -44,7 +44,7 @@ for (var i = 0; i < 3; i++) {
 
 // ===  STEP 0  –  Data, Tipo, Risultato  ===
 if (_step == 0) {
-    draw_panel(_m, _m + 96, _sw - _m, _m + 96 + 200);
+    draw_panel(_m, _m + 96, _sw - _m, _m + 96 + 220);
 
     // Data
     draw_set_font(fnt_body_bold);

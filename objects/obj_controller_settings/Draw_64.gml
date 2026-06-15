@@ -3,7 +3,7 @@
 var _sw  = display_get_gui_width();
 var _sh  = display_get_gui_height();
 var _m   = MARGIN;
-var _con_h = _sh - NAVBAR_HEIGHT - INPUT_HEIGHT - GAP * 4 - 80;
+var _con_h = _sh - (_m + 50 + TAB_HEIGHT) - NAVBAR_HEIGHT - INPUT_HEIGHT - GAP * 3;
 
 // Sfondo
 draw_set_colour(COL_BG);

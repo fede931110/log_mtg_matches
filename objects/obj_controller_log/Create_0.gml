@@ -6,7 +6,8 @@ _step    = 0;
 // step 0 = data/tipo/risultato  |  step 1 = mio mazzo  |  step 2 = avversari
 
 // --- Valori raccolti ---
-_data       = string(current_day) + "/" + string(current_month) + "/" + string(current_year);
+_data       = string_format(current_day, 2, 0) + "/" + string_format(current_month, 2, 0) + "/" + string(current_year);
+_data       = string_replace_all(_data, " ", "0");
 _tipo_idx   = 0;   // indice in global.lookup.modalita
 _ris_idx    = 0;   // 0=W 1=L 2=D
 _mazzo_idx  = 0;

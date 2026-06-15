@@ -14,7 +14,7 @@ draw_screen_title(_m, _m, "LOG MTG MATCHES");
 draw_separator(_m, _sw - _m, _m + 38);
 
 // === Pannello statistiche globali ===
-var _py1 = _m + 50;
+var _py1 = _m + 50 + BTN_HEIGHT + GAP;
 draw_panel(_m, _py1, _sw - _m, _py1 + 90);
 
 draw_set_font(fnt_body_bold);
