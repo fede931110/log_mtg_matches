@@ -27,7 +27,9 @@
     {"$GMFolder":"","%Name":"Timeline","folderPath":"folders/Timeline.yy","name":"Timeline","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"partite.json","CopyToMask":-1,"filePath":"datafiles","name":"partite.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{

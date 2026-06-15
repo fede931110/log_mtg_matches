@@ -8,7 +8,7 @@ _sh         = display_get_gui_height();
 
 // Input campo nome (condiviso tra tab, resettato al cambio tab)
 inp_nome    = instance_create_layer(MARGIN, _sh - NAVBAR_HEIGHT - INPUT_HEIGHT - 60, "GUI", obj_input_field);
-inp_nome.w  = _sw - MARGIN * 2 - 120;
+inp_nome.w  = _sw - MARGIN * 2 - GAP * 2 - 60 - 100;  // leaves room for inp_nadv(60) + btn_add(100) + 2 gaps
 
 // Input n_avversari (solo tab 0)
 inp_nadv    = instance_create_layer(inp_nome.x + inp_nome.w + GAP, inp_nome.y, "GUI", obj_input_field);

@@ -9,7 +9,7 @@ draw_set_colour(COL_BG);
 draw_rectangle(0, 0, _sw, _sh, false);
 
 draw_screen_title(_m, _m, "STORICO PARTITE");
-draw_separator(_m, _sw - _m, _m + 38);
+draw_separator(_m, _sw - _m, _m + 46);
 
 // (obj_dropdown filtri si disegnano autonomamente, posizionati in Create)
 
@@ -20,7 +20,7 @@ for (var i = array_length(_filtrate) - 1; i >= 0; i--) {
     array_push(_ordinata, _filtrate[i]);
 }
 
-var _list_y1 = _m + 96;
+var _list_y1 = _m + 100;  // dropdowns end at _m+54+40=_m+94, +6px gap
 var _list_y2 = _sh - NAVBAR_HEIGHT - GAP;
 var _row_h   = 68;
 var _visible = floor((_list_y2 - _list_y1) / _row_h);

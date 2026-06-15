@@ -8,7 +8,7 @@ draw_set_colour(COL_BG);
 draw_rectangle(0, 0, _sw, _sh, false);
 
 draw_screen_title(_m, _m, "STATISTICHE");
-draw_separator(_m, _sw - _m, _m + 38);
+draw_separator(_m, _sw - _m, _m + 46);
 
 // Tab bar
 var _tab_labels = ["Modalità", "Mazzi", "Avversari"];

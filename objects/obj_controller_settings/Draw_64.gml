@@ -11,7 +11,7 @@ draw_rectangle(0, 0, _sw, _sh, false);
 
 // Titolo
 draw_screen_title(_m, _m, "SETTINGS");
-draw_separator(_m, _sw - _m, _m + 38);
+draw_separator(_m, _sw - _m, _m + 46);
 
 // ===  TAB BAR  ===
 var _tabs_label = ["Modalità", "Miei Mazzi", "Avversari"];

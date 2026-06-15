@@ -12,7 +12,7 @@ _f_avversario = "";
 
 // Dropdown filtri
 var _ddw = (_sw - MARGIN * 2 - GAP * 3) / 4;
-var _ddy = MARGIN + 46;
+var _ddy = MARGIN + 54;  // 8px below separator at MARGIN+46
 
 dd_tipo = instance_create_layer(MARGIN, _ddy, "GUI", obj_dropdown);
 dd_tipo.w           = _ddw;

@@ -60,6 +60,7 @@ function _prev_step() {
         dd_mazzo.visible  = (_step == 1);
         btn_avanti.label  = (_step < 2) ? "Avanti →" : "Salva Partita";
         btn_indietro.enabled = (_step > 0);
+        _rebuild_avv_dropdowns();
     }
 }
 
@@ -87,7 +88,7 @@ function _rebuild_avv_dropdowns() {
     }
 
     for (var i = 0; i < _n_adv; i++) {
-        var _row_y  = 150 + i * 90;
+        var _row_y  = MARGIN + 132 + i * 118;
         var _ddw    = (_sw - MARGIN * 2 - GAP) / 2;
 
         var _dd_n   = instance_create_layer(MARGIN, _row_y, "GUI", obj_dropdown);
