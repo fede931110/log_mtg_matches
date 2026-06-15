@@ -1,12 +1,12 @@
-{
+﻿{
   "$GMObject":"",
   "%Name":"obj_data_manager",
   "eventList":[
-    {"$GMEvent":"","%Name":"","eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","eventNum":0,"eventType":0,"collisionObjectId":null,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_data_manager",
-  "overriddenProperties":[],
+  "properties":[],
   "parent":{"name":"Oggetti","path":"folders/Oggetti.yy",},
   "parentObjectId":null,
   "persistent":true,

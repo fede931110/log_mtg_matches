@@ -1,4 +1,4 @@
-{
+﻿{
   "$GMFont":"",
   "%Name":"fnt_body_bold",
   "AntiAlias":1,
@@ -19,13 +19,18 @@
   "kerningPairs":[],
   "last":0,
   "lineHeight":0,
-  "maintainGlyphs":false,
+  "maintainGlyphs":false,"maintainGms1Font":false,
   "MSDF":false,
   "MSDFSpread":8,
   "name":"fnt_body_bold",
-  "parent":{"name":"Font","path":"folders/Font.yy",},
+  "parent":{
+    "name":"Font",
+    "path":"folders/Font.yy",
+  },
   "pointRounding":0,
-  "ranges":[{"lower":32,"upper":127,},],
+  "ranges":[
+    {"lower":32,"upper":127,},
+  ],
   "regenerateBitmap":false,
   "resourceType":"GMFont",
   "resourceVersion":"2.0",
@@ -33,6 +38,9 @@
   "size":18.0,
   "styleName":"Bold",
   "tags":[],
-  "textureGroupId":{"name":"Default","path":"texturegroups/Default",},
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
   "TTFName":"",
 }
