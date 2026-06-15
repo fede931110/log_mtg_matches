@@ -116,7 +116,7 @@ if (_step == 0) {
 
 // ===  STEP 1  –  Mio Mazzo  ===
 if (_step == 1) {
-    draw_panel(_m, _m + 96, _sw - _m, _m + 160);
+    draw_panel(_m, _m + 96, _sw - _m, _m + 200);
     draw_set_font(fnt_body_bold);
     draw_set_colour(COL_INK_FADED);
     draw_set_halign(fa_left);
@@ -129,7 +129,7 @@ if (_step == 1) {
 if (_step == 2) {
     var _n_adv = global.lookup.modalita[_tipo_idx].n_avversari;
     for (var i = 0; i < _n_adv; i++) {
-        var _ly = 100 + i * 90;
+        var _ly = 150 + i * 90;
         draw_set_font(fnt_body_bold);
         draw_set_colour(COL_INK_FADED);
         draw_set_halign(fa_left);

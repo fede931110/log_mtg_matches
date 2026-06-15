@@ -87,7 +87,7 @@ function _rebuild_avv_dropdowns() {
     }
 
     for (var i = 0; i < _n_adv; i++) {
-        var _row_y  = 130 + i * 90;
+        var _row_y  = 150 + i * 90;
         var _ddw    = (_sw - MARGIN * 2 - GAP) / 2;
 
         var _dd_n   = instance_create_layer(MARGIN, _row_y, "GUI", obj_dropdown);
