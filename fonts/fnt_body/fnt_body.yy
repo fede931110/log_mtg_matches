@@ -19,9 +19,7 @@
   "kerningPairs":[],
   "last":0,
   "lineHeight":0,
-  "maintainGlyphs":false,"maintainGms1Font":false,
-  "MSDF":false,
-  "MSDFSpread":8,
+  "maintainGms1Font":false,
   "name":"fnt_body",
   "parent":{
     "name":"Font",
@@ -35,6 +33,7 @@
   "resourceType":"GMFont",
   "resourceVersion":"2.0",
   "sampleText":"abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ\n0123456789 _-+=~!@#$%^&*()",
+  "sdfSpread":8,
   "size":18.0,
   "styleName":"Regular",
   "tags":[],
@@ -43,4 +42,5 @@
     "path":"texturegroups/Default",
   },
   "TTFName":"",
+  "usesSDF":false,
 }
