@@ -1,0 +1,868 @@
+[
+  {
+    "id": 1,
+    "data": "23/11/2024",
+    "tipo": "1v1",
+    "risultato": "L",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Death Toll"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "data": "23/11/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Death Toll"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "data": "23/11/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Death Toll"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "data": "23/11/2024",
+    "tipo": "3 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Bambolette",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Death Toll"
+      },
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Bloomburrow"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "data": "23/11/2024",
+    "tipo": "3 FFA",
+    "risultato": "L",
+    "mio_mazzo": "Bambolette",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Death Toll"
+      },
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Bloomburrow"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "data": "23/11/2024",
+    "tipo": "3 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Bambolette",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Death Toll"
+      },
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Bloomburrow"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "data": "24/11/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Eldrazi",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Draghi"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "data": "24/11/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Dogmeat"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "data": "24/11/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Bambolette",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Dogmeat"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "data": "24/11/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Bambolette",
+    "avversari": [
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Obscura"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "data": "25/11/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Merfolk",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Death Toll"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "data": "25/11/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Merfolk",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Death Toll"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "data": "14/12/2024",
+    "tipo": "4 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Quick Draw",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Death Toll"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": "Manifest"
+      },
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Necron"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "data": "15/12/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Miracle",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Dogmeat"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "data": "15/12/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Quick Draw",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Draghi"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "data": "15/12/2024",
+    "tipo": "1v1",
+    "risultato": "L",
+    "mio_mazzo": "Endless",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Draghi"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "data": "20/12/2024",
+    "tipo": "1v1",
+    "risultato": "L",
+    "mio_mazzo": "Energie Fallout",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Detective"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "data": "21/12/2024",
+    "tipo": "5 Obbiettivo",
+    "risultato": "W",
+    "mio_mazzo": "Urza",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Miracoli"
+      },
+      {
+        "nome": "Sandro",
+        "mazzo": "Dogmeat"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Angeli"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": "Blitz"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "data": "21/12/2024",
+    "tipo": "5 Obbiettivo",
+    "risultato": "W",
+    "mio_mazzo": "Dr. Who",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Endless"
+      },
+      {
+        "nome": "Sandro",
+        "mazzo": "Draghi"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Bloomburrow"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": "Infect"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "data": "23/12/2024",
+    "tipo": "1v1",
+    "risultato": "L",
+    "mio_mazzo": "Bambolette",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Dogmeat"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "data": "23/12/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Bambolette",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Dogmeat"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "data": "26/12/2024",
+    "tipo": "4 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Energie",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Miracoli"
+      },
+      {
+        "nome": "Fabrizio",
+        "mazzo": ""
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Draghi"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "data": "26/12/2024",
+    "tipo": "4 FFA",
+    "risultato": "L",
+    "mio_mazzo": "Bambolette",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Miracoli"
+      },
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Bloomburrow"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Angeli"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "data": "28/12/2024",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Bambolette",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Dogmeat"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "data": "03/01/2025",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Urza",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Draghi"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "data": "10/01/2025",
+    "tipo": "3 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Sprona",
+    "avversari": [
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Obscura"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Angeli"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "data": "10/01/2025",
+    "tipo": "3 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Merfolk",
+    "avversari": [
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Obscura"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Draghi"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "data": "11/01/2025",
+    "tipo": "3 FFA",
+    "risultato": "L",
+    "mio_mazzo": "Merfolk",
+    "avversari": [
+      {
+        "nome": "Poppy",
+        "mazzo": "Orrori"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "data": "11/01/2025",
+    "tipo": "3 FFA",
+    "risultato": "L",
+    "mio_mazzo": "Merfolk",
+    "avversari": [
+      {
+        "nome": "Poppy",
+        "mazzo": "Orrori"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "data": "14/01/2025",
+    "tipo": "3 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Cavalieri"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "data": "14/01/2025",
+    "tipo": "3 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Cavalieri"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "data": "14/01/2025",
+    "tipo": "3 FFA",
+    "risultato": "L",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Cavalieri"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "data": "17/01/2025",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Quick Draw",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Draghi"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "data": "18/01/2025",
+    "tipo": "4 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Sprona",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Detective"
+      },
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Cavalieri"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": "Dread"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "data": "25/01/2025",
+    "tipo": "3 FFA",
+    "risultato": "L",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": "Piantine"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "data": "25/01/2025",
+    "tipo": "3 FFA",
+    "risultato": "L",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": "Piantine"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "data": "25/01/2025",
+    "tipo": "3 FFA",
+    "risultato": "L",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": ""
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "data": "26/01/2025",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Quick Draw",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Draghi"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "data": "26/01/2025",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Energie Fallout",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Dogmeat"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "data": "01/02/2025",
+    "tipo": "5 Obbiettivo",
+    "risultato": "W",
+    "mio_mazzo": "Ribelli",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Endless"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      },
+      {
+        "nome": "Sandro",
+        "mazzo": "Draghi"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": "Piantine"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "data": "08/03/2025",
+    "tipo": "3 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Sprona",
+    "avversari": [
+      {
+        "nome": "Poppy",
+        "mazzo": "Detective"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "data": "08/03/2025",
+    "tipo": "3 FFA",
+    "risultato": "L",
+    "mio_mazzo": "Energie",
+    "avversari": [
+      {
+        "nome": "Poppy",
+        "mazzo": "Cavalieri"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Ezio"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "data": "09/03/2025",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "data": "09/03/2025",
+    "tipo": "1v1",
+    "risultato": "L",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "data": "09/03/2025",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "data": "20/03/2025",
+    "tipo": "3 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Sprona",
+    "avversari": [
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Obscura"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": "Counter"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "data": "23/03/2025",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Bambolette",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Orso"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "data": "23/03/2025",
+    "tipo": "1v1",
+    "risultato": "W",
+    "mio_mazzo": "Manifest",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Orso"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "data": "23/03/2025",
+    "tipo": "1v1",
+    "risultato": "L",
+    "mio_mazzo": "Ribelli",
+    "avversari": [
+      {
+        "nome": "Sandro",
+        "mazzo": "Dogmeat"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "data": "29/03/2025",
+    "tipo": "3 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Poppy",
+        "mazzo": "Piantine"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "data": "05/04/2025",
+    "tipo": "3 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Fabrizio",
+        "mazzo": "Cavalieri"
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Elfi Mono"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "data": "17/04/2025",
+    "tipo": "4 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Muri",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Sultai"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": "Temur"
+      },
+      {
+        "nome": "Sandro",
+        "mazzo": "Draghi"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "data": "17/04/2025",
+    "tipo": "4 FFA",
+    "risultato": "L",
+    "mio_mazzo": "Warriors",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": "Sultai"
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": "Piantine"
+      },
+      {
+        "nome": "Sandro",
+        "mazzo": "Orso"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "data": "21/04/2025",
+    "tipo": "4 FFA",
+    "risultato": "W",
+    "mio_mazzo": "Muri",
+    "avversari": [
+      {
+        "nome": "Matteo",
+        "mazzo": ""
+      },
+      {
+        "nome": "Poppy",
+        "mazzo": ""
+      },
+      {
+        "nome": "Daniele",
+        "mazzo": "Angeli"
+      }
+    ]
+  }
+]
