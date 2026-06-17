@@ -53,6 +53,14 @@ dd_avv.on_change    = method(self, function(i, v) {
 // ID partita selezionata per eventuale eliminazione
 _selected_id = -1;
 
+// Limite risultati mostrati (-1 = tutti)
+_limit = -1;
+
+// Stato drag-scroll (touch)
+_drag_start_y     = -1;
+_drag_scroll_base = 0;
+_is_dragging      = false;
+
 // ============================================================
 function _build_tipo_options() {
     var _out = ["Tutti"];

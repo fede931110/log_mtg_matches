@@ -22,7 +22,7 @@
 #macro MARGIN          24    // margine dai bordi schermo
 #macro GAP             12    // gap tra elementi
 #macro CORNER_RADIUS    6    // raggio angoli arrotondati
-#macro NAVBAR_HEIGHT   56    // altezza barra navigazione inferiore
+#macro NAVBAR_HEIGHT   70    // altezza barra navigazione inferiore
 #macro BTN_HEIGHT      40    // altezza bottoni standard
 #macro BTN_PADDING_X   16    // padding orizzontale bottoni
 #macro INPUT_HEIGHT    36    // altezza campi input/dropdown

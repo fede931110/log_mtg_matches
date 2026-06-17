@@ -41,9 +41,14 @@ var _row_h = 40;
 
 draw_panel(_m, _py1, _sw - _m, _py2);
 
-// Intestazione tabella
+// Intestazione tabella – colonne proporzionali
 var _cols = ["NOME", "PARTITE", "W", "L", "WIN%"];
-var _cx   = [_m + 16, _m + 170, _m + 240, _m + 290, _sw - _m - 16];
+var _cw2  = _sw - _m * 2;
+var _cx   = [_m + 16,
+             _m + _cw2 * 0.42,
+             _m + _cw2 * 0.57,
+             _m + _cw2 * 0.70,
+             _sw - _m - 16];
 var _calign = [fa_left, fa_center, fa_center, fa_center, fa_right];
 draw_set_font(fnt_small);
 draw_set_colour(COL_INK_FADED);

@@ -45,11 +45,11 @@ function draw_badge(cx, cy, risultato) {
 /// @param {real} y
 /// @param {string} testo
 function draw_screen_title(x, y, testo) {
-    draw_set_font(fnt_title);
+    draw_set_font(fnt_body_bold);
     draw_set_colour(COL_GOLD);
-    draw_set_halign(fa_left);
+    draw_set_halign(fa_center);
     draw_set_valign(fa_top);
-    draw_text(x, y, testo);
+    draw_text(display_get_gui_width() / 2, y, testo);
 }
 
 /// @desc Disegna un separatore orizzontale color oro sbiadito.

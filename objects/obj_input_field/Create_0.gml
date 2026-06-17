@@ -13,7 +13,9 @@ max_len    = 32;
 on_submit  = undefined;
 placeholder = "Scrivi qui...";
 
-_text      = "";
-_focused   = false;
-_cursor    = 0;
-_blink     = 0;
+_text           = "";
+_focused        = false;
+_cursor         = 0;
+_blink          = 0;
+_keyboard_shown = false;
+_keyboard_timer = 0;   // cooldown frames before checking keyboard_virtual_status

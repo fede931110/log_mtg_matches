@@ -16,7 +16,7 @@ draw_text(x + 10, y + h / 2, _label);
 
 draw_set_halign(fa_right);
 draw_set_colour(COL_GOLD);
-draw_text(x + w - 10, y + h / 2, _open ? "▲" : "▼");
+draw_text(x + w - 10, y + h / 2, _open ? "^" : "v");
 
 if (!_open) exit;
 

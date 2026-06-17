@@ -1,5 +1,4 @@
 // obj_controller_history  –  Draw GUI
-// Layout card a 2 righe:  [data | tipo | badge]  /  [mazzo → vs avversari]
 
 var _sw  = display_get_gui_width();
 var _sh  = display_get_gui_height();
@@ -11,23 +10,53 @@ draw_rectangle(0, 0, _sw, _sh, false);
 draw_screen_title(_m, _m, "STORICO PARTITE");
 draw_separator(_m, _sw - _m, _m + 46);
 
-// (obj_dropdown filtri si disegnano autonomamente, posizionati in Create)
-
-// Lista filtrata, ordine inverso (più recenti prima)
+// Lista filtrata, ordine inverso (piu' recenti prima)
 var _filtrate = filtra_partite(_f_tipo, _f_risultato, _f_mazzo, _f_avversario);
 var _ordinata = [];
 for (var i = array_length(_filtrate) - 1; i >= 0; i--) {
     array_push(_ordinata, _filtrate[i]);
 }
 
-var _list_y1 = _m + 100;  // dropdowns end at _m+54+40=_m+94, +6px gap
-var _list_y2 = _sh - NAVBAR_HEIGHT - GAP;
+// Applica limite al numero di risultati mostrati
+if (_limit > 0 && array_length(_ordinata) > _limit) {
+    var _limited = [];
+    for (var i = 0; i < _limit; i++) {
+        array_push(_limited, _ordinata[i]);
+    }
+    _ordinata = _limited;
+}
+
+// Layout: riserva spazio per la barra limite in basso
+var _bar_h   = BTN_HEIGHT + GAP * 2;
+var _list_y1 = _m + 100;
+var _list_y2 = _sh - NAVBAR_HEIGHT - _bar_h;
 var _row_h   = 68;
 var _visible = floor((_list_y2 - _list_y1) / _row_h);
 
 var _max_scroll = max(0, array_length(_ordinata) - _visible);
-if (mouse_wheel_down()) _scroll = min(_scroll + 1, _max_scroll);
-if (mouse_wheel_up())   _scroll = max(_scroll - 1, 0);
+_scroll = clamp(_scroll, 0, _max_scroll);
+
+// Scroll desktop (rotellina)
+if (mouse_wheel_down() && gui_mouse_in(_m, _list_y1, _sw - _m, _list_y2)) _scroll = min(_scroll + 1, _max_scroll);
+if (mouse_wheel_up()   && gui_mouse_in(_m, _list_y1, _sw - _m, _list_y2)) _scroll = max(_scroll - 1, 0);
+
+// Scroll touch (drag verticale)
+var _my_gui = device_mouse_y_to_gui(0);
+if (mouse_check_button_pressed(mb_left) && gui_mouse_in(_m, _list_y1, _sw - _m, _list_y2)) {
+    _drag_start_y     = _my_gui;
+    _drag_scroll_base = _scroll;
+    _is_dragging      = false;
+}
+if (mouse_check_button(mb_left) && _drag_start_y >= 0) {
+    if (abs(_my_gui - _drag_start_y) > 12) _is_dragging = true;
+    if (_is_dragging) {
+        _scroll = clamp(_drag_scroll_base + round((_drag_start_y - _my_gui) / _row_h), 0, _max_scroll);
+    }
+}
+if (mouse_check_button_released(mb_left)) {
+    _drag_start_y = -1;
+    _is_dragging  = false;
+}
 
 // Contatore risultati
 draw_set_font(fnt_small);
@@ -86,13 +115,13 @@ for (var i = 0; i < _visible; i++) {
         draw_text(_sw - _m - 10, _ly2, "vs " + _avv_str);
     }
 
-    // Click → seleziona / deseleziona
-    if (gui_mouse_click(_m, _ry, _sw - _m, _ry + _row_h)) {
+    // Click → seleziona / deseleziona (solo se non in drag)
+    if (!_is_dragging && gui_mouse_click(_m, _ry, _sw - _m, _ry + _row_h)) {
         _selected_id = (_selected_id == _p.id) ? -1 : _p.id;
     }
 }
 
-// Pannello + bottone elimina per la riga selezionata
+// Overlay elimina partita selezionata
 if (_selected_id != -1) {
     var _bx = _sw / 2 - 80;
     var _by = _list_y2 - BTN_HEIGHT - GAP;
@@ -111,6 +140,29 @@ if (_selected_id != -1) {
         rimuovi_partita(_selected_id);
         calc_stats();
         _selected_id = -1;
+    }
+}
+
+// ── Barra selezione numero risultati ────────────────────────────
+var _limits     = [5, 10, 20, 50, -1];
+var _lim_labels = ["5", "10", "20", "50", "Tutti"];
+var _bar_y      = _list_y2 + GAP;
+var _lbw        = (_sw - _m * 2 - GAP * 4) / 5;
+
+for (var i = 0; i < 5; i++) {
+    var _lx   = _m + i * (_lbw + GAP);
+    var _lsel = (_limits[i] == _limit);
+    draw_set_colour(_lsel ? COL_BTN_PRIMARY : COL_BTN_SECONDARY);
+    draw_roundrect_ext(_lx, _bar_y, _lx + _lbw, _bar_y + BTN_HEIGHT, CORNER_RADIUS, CORNER_RADIUS, false);
+    draw_set_colour(_lsel ? COL_GOLD : COL_BORDER);
+    draw_roundrect_ext(_lx, _bar_y, _lx + _lbw, _bar_y + BTN_HEIGHT, CORNER_RADIUS, CORNER_RADIUS, true);
+    draw_set_font(_lsel ? fnt_body_bold : fnt_small);
+    draw_set_colour(_lsel ? COL_SURFACE : COL_INK_FADED);
+    draw_set_halign(fa_center); draw_set_valign(fa_middle);
+    draw_text(_lx + _lbw / 2, _bar_y + BTN_HEIGHT / 2, _lim_labels[i]);
+    if (gui_mouse_click(_lx, _bar_y, _lx + _lbw, _bar_y + BTN_HEIGHT)) {
+        _limit  = _limits[i];
+        _scroll = 0;
     }
 }
 

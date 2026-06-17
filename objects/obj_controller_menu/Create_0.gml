@@ -10,7 +10,7 @@ var _sw = display_get_gui_width();
 var _bw = 220;
 var _bx = _sw / 2 - _bw / 2;
 
-btn_nuova = instance_create_layer(_bx, MARGIN + 50, "GUI", obj_button);
+btn_nuova = instance_create_layer(_bx, MARGIN + 60, "GUI", obj_button);
 btn_nuova.label    = "+ Nuova Partita";
 btn_nuova.w        = _bw;
 btn_nuova.style    = "primary";

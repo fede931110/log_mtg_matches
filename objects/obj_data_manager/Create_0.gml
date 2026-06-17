@@ -2,11 +2,25 @@
 // Proprietà: Persistent = true
 // Posizionato in rm_menu (prima room). Sopravvive a tutti i cambi di room.
 
-// GUI virtuale 480×854 — GMS2 scala automaticamente su qualsiasi schermo
-display_set_gui_size(480, 854);
+// Adatta la GUI all'aspect ratio reale del dispositivo (larghezza virtuale fissa 480)
+// Elimina le bande nere su telefoni con proporzioni diverse da 9:16
+var _dw = display_get_width();
+var _dh = display_get_height();
+if (_dw > 0 && _dh > 0) {
+    surface_resize(application_surface, _dw, _dh);
+    display_set_gui_size(480, round(480.0 * _dh / _dw));
+} else {
+    display_set_gui_size(480, 854);
+}
+
+global.dd_click_handled = false;
 
 global.partite = [];
-global.lookup  = {};
+global.lookup = {
+    miei_mazzi: [],
+    avversari:  [],
+    modalita:   []
+};
 
 // Inizializza stats con la forma completa così Feather conosce i tipi
 global.stats = {

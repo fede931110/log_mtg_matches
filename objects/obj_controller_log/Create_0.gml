@@ -18,9 +18,10 @@ _risultati  = ["W", "L", "D"];
 // --- Widget dropdown mazzo ---
 dd_mazzo = instance_create_layer(MARGIN, 0, "GUI", obj_dropdown);
 dd_mazzo.options  = global.lookup.miei_mazzi;
-dd_mazzo.w        = _sw - MARGIN * 2;
+dd_mazzo.w        = _sw - MARGIN * 2 - GAP * 2;
 dd_mazzo.on_change = method(self, function(i, v) { _mazzo_idx = i; });
 dd_mazzo.visible  = false;
+dd_mazzo.enabled  = false;
 
 // --- Bottone Avanti / Salva ---
 btn_avanti = instance_create_layer(_sw / 2 - 80, _sh - NAVBAR_HEIGHT - BTN_HEIGHT - MARGIN, "GUI", obj_button);
@@ -34,6 +35,7 @@ btn_indietro = instance_create_layer(MARGIN, btn_avanti.y, "GUI", obj_button);
 btn_indietro.label    = "← Indietro";
 btn_indietro.w        = 120;
 btn_indietro.style    = "secondary";
+btn_indietro.enabled  = false;
 btn_indietro.on_click = method(self, function() { _prev_step(); });
 
 _rebuild_avv_dropdowns();
@@ -43,9 +45,11 @@ function _next_step() {
     if (_step == 0) {
         _step = 1;
         dd_mazzo.visible = true;
+        dd_mazzo.enabled = true;
     } else if (_step == 1) {
         _step = 2;
         dd_mazzo.visible = false;
+        dd_mazzo.enabled = false;
         _rebuild_avv_dropdowns();
         btn_avanti.label = "Salva Partita";
     } else if (_step == 2) {
@@ -58,6 +62,7 @@ function _prev_step() {
     if (_step > 0) {
         _step--;
         dd_mazzo.visible  = (_step == 1);
+        dd_mazzo.enabled  = (_step == 1);
         btn_avanti.label  = (_step < 2) ? "Avanti →" : "Salva Partita";
         btn_indietro.enabled = (_step > 0);
         _rebuild_avv_dropdowns();
@@ -88,29 +93,39 @@ function _rebuild_avv_dropdowns() {
     }
 
     for (var i = 0; i < _n_adv; i++) {
-        var _row_y  = MARGIN + 132 + i * 118;
-        var _ddw    = (_sw - MARGIN * 2 - GAP) / 2;
+        var _ddw    = (_sw - MARGIN * 2 - GAP * 3) / 2;
 
-        var _dd_n   = instance_create_layer(MARGIN, _row_y, "GUI", obj_dropdown);
+        var _dd_n   = instance_create_layer(MARGIN + GAP, 0, "GUI", obj_dropdown);
         _dd_n.options    = _avv_names;
         _dd_n.w          = _ddw;
         _dd_n.placeholder = "Avversario " + string(i + 1);
-        var _ii = i;
-        _dd_n.on_change  = method(self, function(idx, val) {
-            _avversari[_ii].nome_idx  = idx;
-            _avversari[_ii].mazzo_idx = 0;
-            _update_mazzo_dd(_ii);
+        // Struct capture per evitare il problema closure-in-loop:
+        // _ii era una var locale che scompariva dopo il return.
+        var _cap_n = { slot: i, ctrl: id };
+        _dd_n.on_change  = method(_cap_n, function(idx, val) {
+            var _s = slot;
+            var _c = ctrl;
+            with (_c) {
+                _avversari[_s].nome_idx  = idx;
+                _avversari[_s].mazzo_idx = 0;
+                _update_mazzo_dd(_s);
+            }
         });
 
-        var _dd_m   = instance_create_layer(MARGIN + _ddw + GAP, _row_y, "GUI", obj_dropdown);
+        var _dd_m   = instance_create_layer(MARGIN + GAP + _ddw + GAP, 0, "GUI", obj_dropdown);
         _dd_m.w          = _ddw;
         _dd_m.placeholder = "Mazzo";
-        _dd_m.on_change  = method(self, function(idx, val) {
-            _avversari[_ii].mazzo_idx = idx;
+        var _cap_m = { slot: i, ctrl: id };
+        _dd_m.on_change  = method(_cap_m, function(idx, val) {
+            var _s = slot;
+            var _c = ctrl;
+            with (_c) {
+                _avversari[_s].mazzo_idx = idx;
+            }
         });
 
-        _update_mazzo_dd(i);
         array_push(_adv_widgets, { dd_nome: _dd_n, dd_mazzo: _dd_m });
+        _update_mazzo_dd(i);
     }
 }
 

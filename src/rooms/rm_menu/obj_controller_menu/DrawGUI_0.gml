@@ -40,7 +40,7 @@ draw_text(_px, _pt + 48, "Win rate:  " + win_pct_str(_s.vittorie, _s.totale));
 // === Pannello per modalità ===
 var _mod_list = global.lookup.modalita;
 var _row_h    = 36;
-var _my1      = _py1 + 106;
+var _my1      = _py1 + 90 + GAP + BTN_HEIGHT + GAP;
 draw_panel(_m, _my1, _sw - _m, _my1 + 16 + array_length(_mod_list) * _row_h);
 
 draw_set_font(fnt_body_bold);
@@ -72,7 +72,6 @@ for (var i = 0; i < array_length(_mod_list); i++) {
     draw_set_colour(COL_INK);
     draw_set_halign(fa_left);
     draw_text(_m + 16, _ry + _row_h/2 - 8, _nome);
-    draw_badge(_sw / 2 - 50, _ry + 4, "W");
     draw_set_halign(fa_center);
     draw_set_colour(COL_INK);
     draw_text(_sw / 2, _ry + _row_h/2 - 8,

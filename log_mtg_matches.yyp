@@ -28,7 +28,7 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"partite.json","CopyToMask":-1,"filePath":"datafiles","name":"partite.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"partite_seed.json","CopyToMask":-1,"filePath":"datafiles","name":"partite_seed.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],

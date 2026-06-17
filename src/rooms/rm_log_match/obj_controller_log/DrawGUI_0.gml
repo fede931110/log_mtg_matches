@@ -44,7 +44,7 @@ for (var i = 0; i < 3; i++) {
 
 // ===  STEP 0  –  Data, Tipo, Risultato  ===
 if (_step == 0) {
-    draw_panel(_m, _m + 96, _sw - _m, _m + 96 + 200);
+    draw_panel(_m, _m + 96, _sw - _m, _m + 96 + 220);
 
     // Data
     draw_set_font(fnt_body_bold);
@@ -55,16 +55,17 @@ if (_step == 0) {
     draw_set_colour(COL_INK);
     draw_text(_m + 12, _m + 128, _data);
     // Pulsanti +/- giorno
-    var _bx_m = _m + 180;
-    var _bx_p = _bx_m + 40;
+    var _bw2 = 32; var _bh2 = 20; var _bby2 = _m + 124;
+    var _bx_p = _sw - _m - GAP - _bw2;
+    var _bx_m = _bx_p - _bw2 - 8;
     draw_set_colour(COL_BTN_SECONDARY);
-    draw_roundrect_ext(_bx_m, _m + 124, _bx_m + 32, _m + 144, 4, 4, false);
-    draw_roundrect_ext(_bx_p, _m + 124, _bx_p + 32, _m + 144, 4, 4, false);
-    draw_set_colour(COL_GOLD); draw_set_halign(fa_center);
-    draw_text(_bx_m + 16, _m + 134, "−");
-    draw_text(_bx_p + 16, _m + 134, "+");
-    if (gui_mouse_click(_bx_m, _m + 124, _bx_m + 32, _m + 144)) _change_date(-1);
-    if (gui_mouse_click(_bx_p, _m + 124, _bx_p + 32, _m + 144)) _change_date(1);
+    draw_roundrect_ext(_bx_m, _bby2, _bx_m + _bw2, _bby2 + _bh2, 4, 4, false);
+    draw_roundrect_ext(_bx_p, _bby2, _bx_p + _bw2, _bby2 + _bh2, 4, 4, false);
+    draw_set_colour(COL_GOLD); draw_set_halign(fa_center); draw_set_valign(fa_middle);
+    draw_text(_bx_m + _bw2 / 2, _bby2 + _bh2 / 2, "-");
+    draw_text(_bx_p + _bw2 / 2, _bby2 + _bh2 / 2, "+");
+    if (gui_mouse_click(_bx_m, _bby2, _bx_m + _bw2, _bby2 + _bh2)) _change_date(-1);
+    if (gui_mouse_click(_bx_p, _bby2, _bx_p + _bw2, _bby2 + _bh2)) _change_date(1);
 
     // Tipo partita
     draw_separator(_m + 4, _sw - _m - 4, _m + 158);
@@ -73,9 +74,10 @@ if (_step == 0) {
     draw_set_halign(fa_left);
     draw_text(_m + 12, _m + 164, "TIPO PARTITA");
     var _mods  = global.lookup.modalita;
-    var _bw    = (_sw - _m * 2 - GAP * (array_length(_mods) - 1)) / array_length(_mods);
+    var _pad   = GAP;
+    var _bw    = (_sw - _m * 2 - _pad * 2 - GAP * (array_length(_mods) - 1)) / array_length(_mods);
     for (var i = 0; i < array_length(_mods); i++) {
-        var _bx = _m + i * (_bw + GAP);
+        var _bx = _m + _pad + i * (_bw + GAP);
         var _by = _m + 182;
         var _sel = (i == _tipo_idx);
         draw_set_colour(_sel ? COL_BTN_PRIMARY : COL_BTN_SECONDARY);
@@ -97,9 +99,10 @@ if (_step == 0) {
     draw_text(_m + 12, _m + 246, "RISULTATO");
     var _ris_labels = ["W  Vittoria", "L  Sconfitta", "D  Pareggio"];
     var _ris_cols   = [COL_WIN, COL_LOSS, COL_DRAW];
-    var _rbw        = (_sw - _m * 2 - GAP * 2) / 3;
+    var _rpad       = GAP;
+    var _rbw        = (_sw - _m * 2 - _rpad * 2 - GAP * 2) / 3;
     for (var i = 0; i < 3; i++) {
-        var _bx = _m + i * (_rbw + GAP);
+        var _bx = _m + _rpad + i * (_rbw + GAP);
         var _by = _m + 264;
         var _sel = (i == _ris_idx);
         draw_set_colour(_sel ? _ris_cols[i] : COL_BTN_SECONDARY);
@@ -116,24 +119,25 @@ if (_step == 0) {
 
 // ===  STEP 1  –  Mio Mazzo  ===
 if (_step == 1) {
-    draw_panel(_m, _m + 96, _sw - _m, _m + 160);
+    draw_panel(_m, _m + 96, _sw - _m, _m + 182);
     draw_set_font(fnt_body_bold);
     draw_set_colour(COL_INK_FADED);
     draw_set_halign(fa_left);
     draw_text(_m + 12, _m + 110, "IL MIO MAZZO");
-    dd_mazzo.x = _m;
+    dd_mazzo.x = _m + GAP;
     dd_mazzo.y = _m + 132;
 }
 
 // ===  STEP 2  –  Avversari  ===
 if (_step == 2) {
     var _n_adv = global.lookup.modalita[_tipo_idx].n_avversari;
+    draw_panel(_m, _m + 96, _sw - _m, _m + 96 + _n_adv * 84 + 22);
     for (var i = 0; i < _n_adv; i++) {
-        var _ly = 100 + i * 90;
+        var _ly = _m + 130 + i * 84;
         draw_set_font(fnt_body_bold);
         draw_set_colour(COL_INK_FADED);
         draw_set_halign(fa_left);
-        draw_text(_m, _ly - 18, "AVVERSARIO " + string(i + 1));
+        draw_text(_m + 12, _ly - 18, "AVVERSARIO " + string(i + 1));
     }
 }
 

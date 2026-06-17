@@ -2,7 +2,9 @@
 //  DATA UTILITIES  –  persistenza JSON
 // ============================================================
 
-/// @desc Carica partite.json in global.partite. Crea array vuoto se il file non esiste.
+/// @desc Carica partite.json in global.partite.
+/// Se non esiste ancora (prima installazione/run), lo inizializza da partite_seed.json
+/// e lo salva subito — così i run successivi trovano il file utente e non lo sovrascrivono.
 function load_partite() {
     var _path = working_directory + "partite.json";
     if (file_exists(_path)) {
@@ -12,7 +14,17 @@ function load_partite() {
         var _parsed = json_parse(_json);
         global.partite = is_array(_parsed) ? _parsed : [];
     } else {
-        global.partite = [];
+        var _seed = working_directory + "partite_seed.json";
+        if (file_exists(_seed)) {
+            var _buf  = buffer_load(_seed);
+            var _json = buffer_read(_buf, buffer_text);
+            buffer_delete(_buf);
+            var _parsed = json_parse(_json);
+            global.partite = is_array(_parsed) ? _parsed : [];
+        } else {
+            global.partite = [];
+        }
+        save_partite();
     }
 }
 

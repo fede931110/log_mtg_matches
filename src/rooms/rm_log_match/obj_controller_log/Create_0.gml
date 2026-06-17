@@ -17,7 +17,7 @@ _risultati  = ["W", "L", "D"];
 // --- Widget dropdown mazzo ---
 dd_mazzo = instance_create_layer(MARGIN, 0, "GUI", obj_dropdown);
 dd_mazzo.options  = global.lookup.miei_mazzi;
-dd_mazzo.w        = _sw - MARGIN * 2;
+dd_mazzo.w        = _sw - MARGIN * 2 - GAP * 2;
 dd_mazzo.on_change = method(self, function(i, v) { _mazzo_idx = i; });
 dd_mazzo.visible  = false;
 
@@ -33,6 +33,7 @@ btn_indietro = instance_create_layer(MARGIN, btn_avanti.y, "GUI", obj_button);
 btn_indietro.label    = "← Indietro";
 btn_indietro.w        = 120;
 btn_indietro.style    = "secondary";
+btn_indietro.enabled  = false;
 btn_indietro.on_click = method(self, function() { _prev_step(); });
 
 _rebuild_avv_dropdowns();
@@ -86,10 +87,10 @@ function _rebuild_avv_dropdowns() {
     }
 
     for (var i = 0; i < _n_adv; i++) {
-        var _row_y  = 130 + i * 90;
-        var _ddw    = (_sw - MARGIN * 2 - GAP) / 2;
+        var _row_y  = MARGIN + 134 + i * 84;
+        var _ddw    = (_sw - MARGIN * 2 - GAP * 3) / 2;
 
-        var _dd_n   = instance_create_layer(MARGIN, _row_y, "GUI", obj_dropdown);
+        var _dd_n   = instance_create_layer(MARGIN + GAP, _row_y, "GUI", obj_dropdown);
         _dd_n.options    = _avv_names;
         _dd_n.w          = _ddw;
         _dd_n.placeholder = "Avversario " + string(i + 1);
@@ -100,7 +101,7 @@ function _rebuild_avv_dropdowns() {
             _update_mazzo_dd(_ii);
         });
 
-        var _dd_m   = instance_create_layer(MARGIN + _ddw + GAP, _row_y, "GUI", obj_dropdown);
+        var _dd_m   = instance_create_layer(MARGIN + GAP + _ddw + GAP, _row_y, "GUI", obj_dropdown);
         _dd_m.w          = _ddw;
         _dd_m.placeholder = "Mazzo";
         _dd_m.on_change  = method(self, function(idx, val) {

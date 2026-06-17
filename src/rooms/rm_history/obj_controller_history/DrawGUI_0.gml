@@ -28,17 +28,27 @@ var _max_scroll = max(0, array_length(_ordinata) - _visible);
 if (mouse_wheel_down()) _scroll = min(_scroll + 1, _max_scroll);
 if (mouse_wheel_up())   _scroll = max(_scroll - 1, 0);
 
+// Colonne proporzionali alla larghezza schermo
+var _cw      = _sw - _m * 2;
+var _c_data  = _m + 8;
+var _c_tipo  = _m + _cw * 0.28;
+var _c_ris   = _m + _cw * 0.46;
+var _c_mazzo = _m + _cw * 0.63;
+var _c_vs    = _sw - _m - 8;
+
 // Intestazione colonne
 draw_panel(_m, _list_y1, _sw - _m, _list_y1 + 24);
 draw_set_font(fnt_small);
 draw_set_colour(COL_INK_FADED);
-draw_set_halign(fa_left); draw_set_valign(fa_middle);
-draw_text(_m + 10, _list_y1 + 12, "DATA");
+draw_set_valign(fa_middle);
+draw_set_halign(fa_left);
+draw_text(_c_data,  _list_y1 + 12, "DATA");
 draw_set_halign(fa_center);
-draw_text(_m + 90,  _list_y1 + 12, "TIPO");
-draw_text(_m + 180, _list_y1 + 12, "RIS.");
-draw_text(_m + 260, _list_y1 + 12, "MAZZO");
-draw_text(_sw - _m - 80, _list_y1 + 12, "VS");
+draw_text(_c_tipo,  _list_y1 + 12, "TIPO");
+draw_text(_c_ris,   _list_y1 + 12, "RIS.");
+draw_text(_c_mazzo, _list_y1 + 12, "MAZZO");
+draw_set_halign(fa_right);
+draw_text(_c_vs,    _list_y1 + 12, "VS");
 
 var _row_start = _list_y1 + 24;
 for (var i = 0; i < _visible; i++) {
@@ -59,12 +69,12 @@ for (var i = 0; i < _visible; i++) {
     draw_set_font(fnt_body);
     draw_set_colour(COL_INK);
     draw_set_halign(fa_left); draw_set_valign(fa_middle);
-    draw_text(_m + 10, _ry + _row_h / 2, _p.data);
+    draw_text(_c_data, _ry + _row_h / 2, _p.data);
 
     draw_set_halign(fa_center);
-    draw_text(_m + 90, _ry + _row_h / 2, _p.tipo);
-    draw_badge(_m + 180, _ry + _row_h / 2, _p.risultato);
-    draw_text(_m + 260, _ry + _row_h / 2, _p.mio_mazzo);
+    draw_text(_c_tipo,  _ry + _row_h / 2, _p.tipo);
+    draw_badge(_c_ris,  _ry + _row_h / 2, _p.risultato);
+    draw_text(_c_mazzo, _ry + _row_h / 2, _p.mio_mazzo);
 
     // Avversari (stringa compatta)
     var _avv_str = "";
@@ -75,7 +85,7 @@ for (var i = 0; i < _visible; i++) {
         }
     }
     draw_set_halign(fa_right);
-    draw_text(_sw - _m - 10, _ry + _row_h / 2, _avv_str);
+    draw_text(_c_vs, _ry + _row_h / 2, _avv_str);
 
     // Click → seleziona / deseleziona
     if (gui_mouse_click(_m, _ry, _sw - _m, _ry + _row_h)) {

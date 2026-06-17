@@ -11,7 +11,7 @@ draw_screen_title(_m, _m, "STATISTICHE");
 draw_separator(_m, _sw - _m, _m + 46);
 
 // Tab bar
-var _tab_labels = ["Modalità", "Mazzi", "Avversari"];
+var _tab_labels = ["Modalita'", "Mazzi", "Avversari"];
 var _tw  = (_sw - _m * 2) / 3;
 var _ty1 = _m + 50;
 for (var i = 0; i < 3; i++) {
